@@ -2,8 +2,13 @@ variable "sample" {
   default = "Hello from Default "
 }
 variable "list" {
-  default = [ "shuja",100,boolean]
+  default = [
+    "shuja",
+    100,
+    true]
 }
+
+
 variable "map" {
   default = {
     name = "shujath",
