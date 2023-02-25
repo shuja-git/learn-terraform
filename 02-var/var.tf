@@ -17,5 +17,8 @@ variable "map" {
   }
 }
 output "list" {
-  value = "first value from list ${var.list[0]}, 3rd value from map is ${var.map[boolean]} "
+  value = "first value from list ${var.list[0]}"
+}
+output "vars" {
+  value = "last value from map is ${var.map["boolean"]}"
 }
