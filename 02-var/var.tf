@@ -38,5 +38,5 @@ variable "d1" {
   ]
 }
 output "count" {
-  value = var.d1.*.course_name
+  value = var.d1[count.index]
 }
