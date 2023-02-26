@@ -10,3 +10,18 @@ variable "d2" {
 resource "null_resource" "d2" {
   count = length(var.d2)
 }
+variable "d3" {
+  default = {
+    banana = {
+      name = "banana"
+      count = 30
+    }
+    apple = {
+      name = "apple"
+      count = 3
+    }
+  }
+}
+resource "null_resource" "d3" {
+  count = length(var.d3)
+}
