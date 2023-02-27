@@ -26,3 +26,7 @@ resource "null_resource" "d3" {
  # count = length(var.d3)
   for_each = var.d3
 }
+output "FRUITS" {
+  value = [for s in var.d2: upper(s)]
+
+}
