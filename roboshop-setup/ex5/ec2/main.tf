@@ -14,4 +14,4 @@
 #}
 #
 #variable "component" {}
-#
+variable "sg_id" {}
