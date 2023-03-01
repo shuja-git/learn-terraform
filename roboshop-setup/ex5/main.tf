@@ -6,6 +6,6 @@ module "security_group" {
 #
 #}
 
-#output "ec2_output" {
-#  value = module.ec2_instance
-#}
+output "sg" {
+  value = module.security_group.sg_id
+}
