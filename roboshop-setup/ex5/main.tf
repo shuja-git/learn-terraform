@@ -6,6 +6,6 @@ module "security_group" {
 #
 #}
 
-output "sg" {
-  value = module.security_group.sg_id
-}
+#output "sg" {
+#  value = module.security_group.sg_id
+#}
