@@ -13,7 +13,7 @@ resource "aws_instance" "machine" {
   }
 }
 
-output "ec2" {
+output "private_ip" {
   value = aws_instance.machine.private_ip
 }
 
