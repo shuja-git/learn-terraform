@@ -6,10 +6,10 @@ data "aws_ami" "ami" {
 
 resource "aws_instance" "machine" {
   ami           = data.aws_ami.ami.image_id
-  instance_type = "t3.micro"
+  instance_type = var.instance_type
   vpc_security_group_ids = [var.sg_id]
   tags = {
-    Name = "HelloWorld"
+    Name = var.component
   }
 }
 
@@ -18,3 +18,5 @@ output "private_ip" {
 }
 
 variable "sg_id" {}
+variable "instance_type" {}
+variable "component" {}
