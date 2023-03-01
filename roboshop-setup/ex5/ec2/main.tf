@@ -7,7 +7,7 @@ data "aws_ami" "ami" {
 resource "aws_instance" "instance" {
   ami           = data.aws_ami.ami.image_id
   instance_type = "t3.micro"
-#  vpc_security_group_ids = ["sg_id"]
+  vpc_security_group_ids = [var.sg_id]
   tags = {
     Name = "HelloWorld"
   }
@@ -16,3 +16,5 @@ resource "aws_instance" "instance" {
 output "ec2" {
   value = aws_instance.instance
 }
+
+variable "sg_id" {}
