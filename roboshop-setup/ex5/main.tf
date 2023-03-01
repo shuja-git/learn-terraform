@@ -1,7 +1,7 @@
 module "security_group" {
   source = "./sg"
 }
-module "ec2_instance" {
+module "ec2" {
   for_each = var.instances
   source = "./ec2"
   component = each.value["name"]
@@ -15,5 +15,5 @@ module "ec2_instance" {
 #}
 
 output "ec2" {
-  value = module.ec2_instance
+  value = module.ec2
 }
