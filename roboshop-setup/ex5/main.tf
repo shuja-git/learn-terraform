@@ -18,4 +18,5 @@ module "route53_module" {
 
 output "ec2" {
   value = module.ec2
+
 }
