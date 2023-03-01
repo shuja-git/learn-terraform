@@ -14,7 +14,7 @@ resource "aws_instance" "instance" {
 }
 
 output "ec2" {
-  value = aws_instance.instance
+  value = aws_instance.instance.private_ip
 }
 
 variable "sg_id" {}
