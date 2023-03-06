@@ -1,4 +1,4 @@
-#variable "sample" {
+variable "sample1" {}
 #  default = "Hello from Default "
 #}
 variable "list" {
@@ -9,13 +9,8 @@ variable "list" {
 }
 #
 #
-variable "map" {
-  default = {
-    name = "shujath",
-    course = "Cloud",
-    boolean = true
-  }
-}
+variable "map" {}
+
 output "list" {
   value = "first value from list ${var.list[0]}, boolean value from map is ${var.map["boolean"]}"
 }
