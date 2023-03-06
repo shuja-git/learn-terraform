@@ -40,3 +40,7 @@ variable "d1" {
 output "count" {
   value = var.d1[count.index]
 }
+variable "sample1" {}
+output "sample1" {
+  value = var.sample1
+}
