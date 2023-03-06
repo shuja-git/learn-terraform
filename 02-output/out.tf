@@ -26,6 +26,8 @@ variable "instances" {
       type = "t2.micro"
     }
   }
+}
 
-
+output "ec2" {
+  value = aws_instance.instances
 }
