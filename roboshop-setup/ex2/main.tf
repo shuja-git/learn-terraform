@@ -12,7 +12,7 @@ resource "aws_instance" "frontend" {
   vpc_security_group_ids = ["sg-0f814c32290173c7c"]
   }
 variable "instances" {
-  default = ["cart","catalogue","user","shipping","payment"]
+  default = ["cart","catalogue","user","shipping","dispatch"]
 }
 output "public_ip" {
   value = aws_instance.frontend.*.public_ip
