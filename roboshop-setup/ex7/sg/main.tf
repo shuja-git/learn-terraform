@@ -1,5 +1,5 @@
-resource "aws_security_group" "allow_tls" {
-  name        = "allow_tls"
+resource "aws_security_group" "new-allow-all" {
+  name        = "new-allow-all"
   description = "Allow TLS inbound traffic"
 
   ingress {
@@ -21,5 +21,5 @@ resource "aws_security_group" "allow_tls" {
   }
 }
 output "sg_id" {
-  value = aws_security_group.allow_tls.id
+  value = aws_security_group.new-allow-all.id
 }
