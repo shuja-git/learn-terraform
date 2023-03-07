@@ -9,4 +9,9 @@ module "ec2" {
   instance_type = each.value["type"]
 }
 
+output "ec2_output" {
+  value = module.ec2
+}
+
+
 

@@ -15,4 +15,8 @@ resource "aws_instance" "instance" {
 }
 variable "sg_id" {}
 
+output "private_ip" {
+  value = aws_instance.instance
+}
+
 
