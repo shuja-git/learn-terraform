@@ -6,7 +6,7 @@ data "aws_ami" "ami" {
 resource "aws_instance" "instance" {
   ami           = data.aws_ami.ami.image_id
   instance_type = var.instance_type
-  vpc_security_group_ids = ["sg-0f814c32290173c7c"]
+  vpc_security_group_ids = [var.sg_id]
 }
 resource "aws_route53_record" "record" {
   zone_id = "Z10218511FGAD8YC6L1HI"
@@ -17,5 +17,6 @@ resource "aws_route53_record" "record" {
 }
 variable "component" {}
 variable "instance_type" {}
+variable "sg_id" {}
 
 
