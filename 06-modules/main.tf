@@ -1,3 +1,7 @@
-module "test" {
-  source = "./childModule"
+#module "test" {
+#  source = "./childModule"
+#}
+
+module "module" {
+  source = "./test"
 }
