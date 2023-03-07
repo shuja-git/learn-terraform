@@ -29,5 +29,5 @@ variable "instances" {
 }
 
 output "ec2" {
-  value = aws_instance.instances
+  value = aws_instance.instances.public_ip
 }
