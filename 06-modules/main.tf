@@ -1,7 +1,7 @@
-#module "test" {
-#  source = "./childModule"
-#}
-
-module "module" {
-  source = "./test"
+module "Null-Resource" {
+  source = "./childModule"
 }
+
+##module "Null-Resource" {
+#  source = "./test"
+#}
