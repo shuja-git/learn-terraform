@@ -10,7 +10,7 @@ module "ec2" {
 }
 
 output "ec2_output" {
-  value = module.ec2
+  value = module.ec2["catalogue"].private_ip
 }
 
 
