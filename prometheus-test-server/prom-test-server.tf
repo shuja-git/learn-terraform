@@ -21,12 +21,12 @@ resource "aws_spot_instance_request" "Node2" {
   wait_for_fulfillment = true
 
   tags = {
-    Name = "prometheus-test-server"
+    Name = "prometheus-test-Node"
   }
 }
 
 resource "aws_ec2_tag" "Node2" {
   resource_id = aws_spot_instance_request.Node1.spot_instance_id
   key         = "Name"
-  value       = "prometheus-test-node"
+  value       = "prometheus-test-Node"
 }
