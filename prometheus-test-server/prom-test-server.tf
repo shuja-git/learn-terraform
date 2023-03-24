@@ -14,6 +14,7 @@ resource "aws_ec2_tag" "Node1" {
   value       = "prometheus-test-server"
 }
 
+
 resource "aws_spot_instance_request" "Node2" {
   ami           = "ami-0b9af232e8488cd98"
   instance_type = "t2.micro"
@@ -26,7 +27,7 @@ resource "aws_spot_instance_request" "Node2" {
 }
 
 resource "aws_ec2_tag" "Node2" {
-  resource_id = aws_spot_instance_request.Node1.spot_instance_id
+  resource_id = aws_spot_instance_request.Node2.spot_instance_id
   key         = "Name"
   value       = "prometheus-test-Node"
 }
